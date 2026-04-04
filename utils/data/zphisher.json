@@ -1,0 +1,29 @@
+{
+    "Name": "zphisher",
+    "Homepage": "https://github.com/htr-tech/zphisher",
+    "Mirror": "https://github.com/gmmirror/zphisher",
+    "Description": "An automated phishing tool with 30+ templates. This Tool is made for educational purpose only. Author will not be responsible for any misuse of this toolkit.",
+    "Dependency": [
+        "git",
+        "bash",
+        "coreutils",
+        "ncurses-utils::ncurses-bin",
+        "gawk::awk",
+        "curl",
+        "grep",
+        "proot",
+        "resolv-conf::resolvconf",
+        "php",
+        "unzip"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/zphisher $PREFIX/tmp/gmmirror_zphisher",
+        "chmod +x $PREFIX/tmp/gmmirror_zphisher",
+        "bash $PREFIX/tmp/gmmirror_zphisher/install.sh",
+        "rm -rf $PREFIX/tmp/gmmirror_zphisher"
+    ],
+    "Uninstall": [
+        "rm -rf $PREFIX/opt/zphisher",
+        "rm -f $PREFIX/bin/zphisher"
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "Name": "katana",
+    "Homepage": "https://github.com/projectdiscovery/katana",
+    "Mirror": "https://github.com/gmmirror/katana",
+    "Description": "A next-generation crawling and spidering framework.",
+    "Dependency": [
+        "git",
+        "golang"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/katana $PREFIX/tmp/gmmirror_katana",
+        "chmod +x -R $PREFIX/tmp/gmmirror_katana",
+        "bash $PREFIX/tmp/gmmirror_katana/install.sh",
+        "rm -rf $PREFIX/tmp/gmmirror_katana"
+    ],
+    "Uninstall": [
+        "rm -rf $PREFIX/opt/katana",
+        "rm -f $PREFIX/bin/katana"
+    ]
+}

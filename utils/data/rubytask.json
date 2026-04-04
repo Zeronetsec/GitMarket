@@ -1,0 +1,19 @@
+{
+    "Name": "rubytask",
+    "Homepage": "https://github.com/Zeronetsec/Rubytask",
+    "Mirror": "https://github.com/gmmirror/rubytask",
+    "Description": "Rubytask is a lightweight CLI tool for managing tasks and notes with zero dependencies.",
+    "Dependency": [
+        "git"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/rubytask $PREFIX/tmp/gmmirror_rubytask",
+        "chmod +x -R $PREFIX/tmp/gmmirror_rubytask",
+        "bash $PREFIX/tmp/gmmirror_rubytask/install.sh",
+        "rm -rf $PREFIX/tmp/gmmirror_rubytask"
+    ],
+    "Uninstall": [
+        "rm -rf $PREFIX/opt/rubytask",
+        "rm -f $PREFIX/bin/rubytask"
+    ]
+}

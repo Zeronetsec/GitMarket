@@ -1,0 +1,20 @@
+{
+    "Name": "nuclei",
+    "Homepage": "https://github.com/projectdiscovery/nuclei",
+    "Mirror": "https://github.com/gmmirror/nuclei",
+    "Description": "Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.",
+    "Dependency": [
+        "git",
+        "golang"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/nuclei $PREFIX/tmp/gmmirror_nuclei",
+        "chmod +x -R $PREFIX/tmp/gmmirror_nuclei",
+        "bash $PREFIX/tmp/gmmirror_nuclei/install.sh",
+        "rm -rf $PREFIX/gmmirror_nuclei"
+    ],
+    "Uninstall": [
+        "rm -rf $PREFIX/opt/nuclei",
+        "rm -f $PREFIX/bin/nuclei"
+    ]
+}

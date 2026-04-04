@@ -1,0 +1,23 @@
+{
+    "Name": "metasploit-for-termux",
+    "Homepage": "https://github.com/rapid7/metasploit-framework",
+    "Mirror": "https://github.com/gmmirror/metasploit-for-termux",
+    "Description": "Running Metasploit Framework in Termux via Rootfs",
+    "Dependency": [
+        "git",
+        "proot-distro"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/metasploit-for-termux $PREFIX/tmp/gmmirror_metasploit_for_termux",
+        "chmod +x -R $PREFIX/tmp/gmmirror_metasploit_for_termux",
+        "bash $PREFIX/tmp/gmmirror_metasploit_for_termux/install.sh",
+        "rm -rf $PREFIX/tmp/gmmirror_metasploit_for_termux"
+    ],
+    "Uninstall": [
+        "proot-distro remove metasploit",
+        "rm -rf $PREFIX/opt/metasploit-in-termux",
+        "rm -f $PREFIX/bin/metasploit-in-termux",
+        "rm -f $PREFIX/bin/msfconsole",
+        "rm -f $PREFIX/bin/msfvenom"
+    ]
+}

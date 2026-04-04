@@ -1,0 +1,19 @@
+{
+    "Name": "comet",
+    "Homepage": "https://github.com/Zeronetsec/Comet",
+    "Mirror": "https://github.com/gmmirror/comet",
+    "Description": "Comet is a lightweight framework specialized for high-efficiency security reconnaissance.",
+    "Dependency": [
+        "git"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/comet $PREFIX/tmp/gmmirror_comet",
+        "chmod +x -R $PREFIX/tmp/gmmirror_comet",
+        "bash $PREFIX/tmp/gmmirror_comet/install.sh",
+        "rm -rf $PREFIX/tmp/gmmirror_comet"
+    ],
+    "Uninstall": [
+        "rm -rf $PREFIX/opt/comet",
+        "rm -f $PREFIX/bin/comet"
+    ]
+}

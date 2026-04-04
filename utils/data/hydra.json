@@ -1,0 +1,39 @@
+{
+    "Name": "hydra",
+    "Homepage": "https://github.com/vanhauser-thc/thc-hydra",
+    "Mirror": "https://github.com/gmmirror/hydra",
+    "Description": "hydra",
+    "Dependency": [
+        "git",
+        "make",
+        "add-apt-key",
+        "gcc::libllvm",
+        "g++::libllvm",
+        "libssl-dev::libssl",
+        "libssh-dev::libssh",
+        "libidn11-dev::libidn11",
+        "libpcre3-dev::libpcre3",
+        "libgtk2.0-dev::libgtk2.0::libgtk",
+        "libmysqlclient-dev::libmysqlclient",
+        "libpq-dev::libpq",
+        "libsvn-dev::libsvn",
+        "firebird-dev::firebird",
+        "libmemcached-dev::libmemcached",
+        "libgpg-error-dev::libgpg-error",
+        "libgcrypt20-dev::libgcrypt20",
+        "libk5crypto3",
+        "libkrb5-3",
+        "libgssapi-krb5-2",
+        "build-essential"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/hydra $PREFIX/tmp/gmmirror_hydra",
+        "chmod +x -R $PREFIX/tmp/gmmirror_hydra",
+        "bash $PREFIX/tmp/gmmirror_hydra/install.sh",
+        "rm -rf $PREFIX/tmp/gmmirror_hydra"
+    ],
+    "Uninstall": [
+        "rm -rf $PREFIX/opt/hydra",
+        "rm -f $(which hydra)"
+    ]
+}

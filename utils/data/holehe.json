@@ -1,0 +1,23 @@
+{
+    "Name": "holehe",
+    "Homepage": "https://github.com/megadose/holehe",
+    "Mirror": "https://github.com/gmmirror/holehe",
+    "Description": "holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.",
+    "Dependency": [
+        "git",
+        "python3",
+        "python3-pip::python-pip",
+        "python3-venv::python-venv",
+        "python3-requests::python-requests"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/holehe $PREFIX/tmp/gmmirror_holehe",
+        "chmod +x -R $PREFIX/tmp/gmmirror_holehe",
+        "bash $PREFIX/tmp/gmmirror_holehe/install.sh",
+        "rm -rf $PREFIX/tmp/gmmirror_holehe"
+    ],
+    "Uninstall": [
+        "rm -rf $PREFIX/opt/holehe",
+        "rm -f $PREFIX/bin/holehe"
+    ]
+}

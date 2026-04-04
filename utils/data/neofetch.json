@@ -1,0 +1,21 @@
+{
+    "Name": "neofetch",
+    "Homepage": "https://github.com/dylanaraps/neofetch",
+    "Mirror": "https://github.com/gmmirror/neofetch",
+    "Description": "A command-line system information tool written in bash 3.2+",
+    "Dependency": [
+        "git",
+        "bash",
+        "coreutils"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/neofetch $PREFIX/tmp/gmmirror_neofetch",
+        "chmod +x -R $PREFIX/tmp/gmmirror_neofetch",
+        "bash $PREFIX/tmp/gmmirror_neofetch/install.sh",
+        "rm -rf $PREFIX/tmp/gmmirror_neofetch"
+    ],
+    "Uninstall": [
+        "rm -rf $PREFIX/opt/neofetch",
+        "rm -f $PREFIX/bin/neofetch"
+    ]
+}
