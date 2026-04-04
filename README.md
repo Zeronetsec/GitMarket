@@ -33,7 +33,7 @@ Built with speed and efficiency in mind, it bridges the gap between discovery an
 
 ## Disclaimer
 **GitMarket** is a powerful but simple **alternative** for your terminal. <br>
-Use it **only** if your primary package manager (apt, brew, pacman, etc.) does not provide the tool you need. <br>
+Use it **only** if your primary package manager (apt, apk, pacman, etc.) does not provide the tool you need. <br>
 Installing the same package via both managers can **cause path conflicts.** <br>
 Use this tool to **fill the gaps**, not as a full system replacement.
 
