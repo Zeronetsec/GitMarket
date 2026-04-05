@@ -29,7 +29,6 @@ Built with speed and efficiency in mind, it bridges the gap between discovery an
 - In-depth metadata and package information retrieval
 - Batch package listing and repository synchronization
 - High-speed reinstallation for corrupted binaries
-- And more
 
 ## Disclaimer
 **GitMarket** is a powerful but simple **alternative** for your terminal. <br>
