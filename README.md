@@ -39,6 +39,7 @@ Built with speed and efficiency in mind, it bridges the gap between discovery an
 - [katana](https://github.com/projectdiscovery/katana)
 - [metasploit](https://github.com/rapid7/metasploit-framework)
 - [muxly](https://github.com/Zeronetsec/Muxly)
+- [naabu](https://github.com/projectdiscovery/naabu)
 - [neofetch](https://github.com/dylanaraps/neofetch)
 - [nuclei](https://github.com/projectdiscovery/nuclei)
 - [rubytask](https://github.com/Zeronetsec/Rubytask)
