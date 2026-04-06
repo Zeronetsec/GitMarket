@@ -1,0 +1,20 @@
+{
+    "Name": "subfinder",
+    "Homepage": "https://github.com/projectdiscovery/subfinder",
+    "Mirror": "https://github.com/gmmirror/subfinder",
+    "Description": "Fast passive subdomain enumeration tool.",
+    "Dependency": [
+        "git",
+        "golang"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/subfinder $PREFIX/tmp/gmmirror_subfinder",
+        "chmod +x -R $PREFIX/tmp/gmmirror_subfinder",
+        "bash $PREFIX/tmp/gmmirror_subfinder/install.sh",
+        "rm -rf $PREFIX/tmp/gmmirror_subfinder"
+    ],
+    "Uninstall": [
+        "rm -rf $PREFIX/opt/subfinder",
+        "rm -f $PREFIX/bin/subfinder"
+    ]
+}
