@@ -1,0 +1,22 @@
+{
+    "Name": "metasploit",
+    "Homepage": "https://github.com/rapid7/metasploit-framework",
+    "Mirror": "https://github.com/gmmirror/metasploit",
+    "Description": "Metasploit Framework",
+    "Dependency": [
+        "git",
+        "proot-distro"
+    ],
+    "Install": [
+        "git clone --depth 1 https://github.com/gmmirror/metasploit $PREFIX/tmp/gmmirror_metasploit",
+        "chmod +x -R $PREFIX/tmp/gmmirror_metasploit",
+        "bash $PREFIX/tmp/gmmirror_metasploit/install.sh",
+        "rm -rf $PREFIX/tmp/gmmirror_metasploit"
+    ],
+    "Uninstall": [
+        "if [[ -d $PREFIX/var/lib/proot-distro/installed-rootfs/metasploit ]]; then proot-distro remove metasploit; fi",
+        "rm -rf $PREFIX/opt/metasploit",
+        "rm -f $PREFIX/bin/msfconsole",
+        "rm -f $PREFIX/bin/msfvenom"
+    ]
+}

@@ -2,7 +2,7 @@
     "Name": "darksay",
     "Homepage": "https://github.com/Blziko/darksay",
     "Mirror": "https://github.com/gmmirror/darksay",
-    "Description": "like cowsay but dark quotes",
+    "Description": "random dark quotes",
     "Dependency": [
         "git",
         "ruby"

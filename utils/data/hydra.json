@@ -6,6 +6,7 @@
     "Dependency": [
         "git",
         "make",
+        "clang",
         "add-apt-key",
         "gcc::libllvm",
         "g++::libllvm",
