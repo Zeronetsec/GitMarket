@@ -13,12 +13,6 @@ func Help() {
 
     utils.BirthDay()
     fmt.Printf(
-        "%sGitMarket %s- %sThe digital marketplace for your terminal.%s\n",
-        color.N, color.DG, color.YY, color.N,
-    )
-
-    fmt.Println()
-    fmt.Printf(
         "%sUsage: %s%s %s<command> [<argument>]%s\n",
         color.N, color.GG, name, color.BB, color.N,
     )
