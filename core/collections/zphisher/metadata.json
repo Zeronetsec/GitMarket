@@ -1,0 +1,18 @@
+{
+    "name": "zphisher",
+    "homepage": "https://github.com/htr-tech/zphisher",
+    "description": "An automated phishing tool with 30+ templates. This Tool is made for educational purpose only. Author will not be responsible for any misuse of this toolkit.",
+    "dependency": [
+        "git",
+        "bash",
+        "coreutils",
+        "ncurses-utils::ncurses-bin",
+        "gawk::awk",
+        "curl",
+        "grep",
+        "proot",
+        "resolv-conf::resolvconf",
+        "php",
+        "unzip"
+    ]
+}

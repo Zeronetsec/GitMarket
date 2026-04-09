@@ -1,0 +1,9 @@
+{
+    "name": "dalfox",
+    "homepage": "https://github.com/hahwul/dalfox",
+    "description": "Dalfox is a powerful open-source XSS scanner and utility focused on automation.",
+    "eependency": [
+        "git",
+        "golang"
+    ]
+}

@@ -7,7 +7,8 @@ import (
     "os"
     "time"
     "gitmarket/utils"
-    "gitmarket/color"
+    "gitmarket/core"
+    "gitmarket/utils/color"
 )
 
 func main() {
@@ -27,16 +28,16 @@ func main() {
     command := os.Args[1]
 
     if command == "--help" {
-        utils.Help()
+        core.Help()
         return
     } else if command == "--version" {
-        utils.Version()
+        core.Version()
         return
     } else if command == "--uwu" {
         utils.Nyan(5 * time.Second)
         return
     } else if command == "--list" {
-        utils.List()
+        core.List()
         return
     }
 
@@ -52,17 +53,17 @@ func main() {
 
     switch command {
         case "--search":
-            utils.Search(query)
+            core.Search(query)
         case "--install":
-            utils.Install(query)
+            core.Install(query)
         case "--uninstall":
-            utils.Uninstall(query)
+            core.Uninstall(query)
         case "--check":
-            utils.Check(query)
+            core.Check(query)
         case "--reinstall":
-            utils.Reinstall(query)
+            core.Reinstall(query)
         case "--info":
-            utils.Info(query)
+            core.Info(query)
         default:
             fmt.Printf(
                 "%s[!] %sUnknown command: %s%s%s\n",

@@ -1,0 +1,9 @@
+{
+    "name": "katana",
+    "homepage": "https://github.com/projectdiscovery/katana",
+    "description": "A next-generation crawling and spidering framework.",
+    "dependency": [
+        "git",
+        "golang"
+    ]
+}

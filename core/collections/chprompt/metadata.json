@@ -1,0 +1,9 @@
+{
+    "name": "chprompt",
+    "Homepage": "https://github.com/Zeronetsec/Chprompt",
+    "Description": "Chprompt is a lightweight tool for switching Linux prompts instantly with 100+ built-in styles and zero dependencies.",
+    "Dependency": [
+        "git",
+        "bash"
+    ]
+}

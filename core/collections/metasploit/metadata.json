@@ -1,0 +1,9 @@
+{
+    "name": "metasploit",
+    "homepage": "https://github.com/rapid7/metasploit-framework",
+    "description": "Metasploit Framework",
+    "dependency": [
+        "git",
+        "curl"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "apktool",
+    "homepage": "https://github.com/iBotPeaches/Apktool",
+    "description": "A tool for reverse engineering Android apk files",
+    "dependency": [
+        "git",
+        "aapt",
+        "openjdk-17",
+        "wget"
+    ]
+}

@@ -6,20 +6,8 @@
 [![license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 # GitMarket
-GitMarket is a powerful CLI-based marketplace designed to simplify how you find, install, and manage developer tools directly from your terminal. <br>
-Built with speed and efficiency in mind, it bridges the gap between discovery and deployment.
-
-## Preview
-<details>
-<summary>Show Preview</summary>
-<br>
-<img src=".preview/preview_1.png" width="500">
-<br><br>
-<img src=".preview/preview_2.png" width="500">
-<br><br>
-<img src=".preview/preview_3.png" width="500">
-<br>
-</details>
+GitMarket is a simple tool to install CLI tools from various repositories. <br>
+Built to avoid doing the same setup steps over and over again.
 
 ## Collections
 <details>
@@ -31,6 +19,7 @@ Built with speed and efficiency in mind, it bridges the gap between discovery an
 - [dalfox](https://github.com/hahwul/dalfox)
 - [darksay](https://github.com/Blziko/darksay)
 - [ffuf](https://github.com/ffuf/ffuf)
+- [gitmarket](https://github.com/Zeronetsec/GitMarket)
 - [gobuster](https://github.com/Oj/gobuster)
 - [gospel](https://github.com/Zeronetsec/Gospel)
 - [holehe](https://github.com/megadose/holehe)
@@ -42,27 +31,27 @@ Built with speed and efficiency in mind, it bridges the gap between discovery an
 - [naabu](https://github.com/projectdiscovery/naabu)
 - [neofetch](https://github.com/dylanaraps/neofetch)
 - [nuclei](https://github.com/projectdiscovery/nuclei)
+- [rclone](https://github.com/rclone/rclone)
 - [rubytask](https://github.com/Zeronetsec/Rubytask)
 - [sqlmap](https://github.com/sqlmapproject/sqlmap)
 - [subfinder](https://github.com/projectdiscovery/subfinder)
+- [whatweb](https://github.com/urbanadventurer/WhatWeb)
 - [zphisher](https://github.com/htr-tech/zphisher)
 
 </details>
 
 ## Features
-- Global tool discovery across curated repositories
-- Instant binary installation and automated setup
-- Zero-trace tool removal and uninstallation
-- Automated environment integrity and path checking
-- In-depth metadata and package information retrieval
-- Batch package listing and repository synchronization
-- High-speed reinstallation for corrupted binaries
+- Install and uninstall tools automatically
+- Search tools by keyword
+- Check installed tool path and info
+- List available tools
 
 ## Disclaimer
-**GitMarket** is a powerful but simple **alternative** for your terminal. <br>
-Use it **only** if your primary package manager (apt, apk, pacman, etc.) does not provide the tool you need. <br>
-Installing the same package via both managers can **cause path conflicts.** <br>
-Use this tool to **fill the gaps**, not as a full system replacement.
+Please read the
+[DISCLAIMER.md](https://github.com/Zeronetsec/GitMarket/blob/main/DISCLAIMER.md)
+before use. <br>
+Use at your own risk. <br>
+This tool uses Bash scripts to interact with your system.
 
 ## Installation
 ```bash

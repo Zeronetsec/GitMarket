@@ -1,0 +1,29 @@
+{
+    "name": "hydra",
+    "homepage": "https://github.com/vanhauser-thc/thc-hydra",
+    "description": "hydra",
+    "dependency": [
+        "git",
+        "make",
+        "clang",
+        "add-apt-key",
+        "gcc::libllvm",
+        "g++::libllvm",
+        "libssl-dev::libssl",
+        "libssh-dev::libssh",
+        "libidn11-dev::libidn11",
+        "libpcre3-dev::libpcre3",
+        "libgtk2.0-dev::libgtk2.0::libgtk",
+        "libmysqlclient-dev::libmysqlclient",
+        "libpq-dev::libpq",
+        "libsvn-dev::libsvn",
+        "firebird-dev::firebird",
+        "libmemcached-dev::libmemcached",
+        "libgpg-error-dev::libgpg-error",
+        "libgcrypt20-dev::libgcrypt20",
+        "libk5crypto3",
+        "libkrb5-3",
+        "libgssapi-krb5-2",
+        "build-essential"
+    ]
+}

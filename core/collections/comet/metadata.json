@@ -1,0 +1,8 @@
+{
+    "name": "comet",
+    "homepage": "https://github.com/Zeronetsec/Comet",
+    "description": "Comet is a lightweight framework specialized for high-efficiency security reconnaissance.",
+    "dependency": [
+        "git"
+    ]
+}

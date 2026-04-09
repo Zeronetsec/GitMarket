@@ -5,7 +5,7 @@ package utils
 import (
     "fmt"
     "time"
-    "gitmarket/color"
+    "gitmarket/utils/color"
 )
 
 func BirthDay() {

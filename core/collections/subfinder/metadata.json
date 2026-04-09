@@ -1,0 +1,9 @@
+{
+    "name": "subfinder",
+    "homepage": "https://github.com/projectdiscovery/subfinder",
+    "description": "Fast passive subdomain enumeration tool.",
+    "dependency": [
+        "git",
+        "golang"
+    ]
+}

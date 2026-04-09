@@ -1,0 +1,9 @@
+{
+    "name": "sqlmap",
+    "homepage": "https://github.com/sqlmapproject/sqlmap",
+    "description": "Automatic SQL injection and database takeover tool",
+    "dependency": [
+        "git",
+        "python3"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "holehe",
+    "homepage": "https://github.com/megadose/holehe",
+    "description": "holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.",
+    "dependency": [
+        "git",
+        "python3",
+        "python3-pip::python-pip",
+        "python3-venv::python-venv",
+        "python3-requests::python-requests"
+    ]
+}

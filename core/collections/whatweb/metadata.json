@@ -1,0 +1,9 @@
+{
+    "name": "whatweb",
+    "homepage": "https://github.com/urbanadventurer/WhatWeb",
+    "description": "Next generation web scanner",
+    "dependency": [
+        "git",
+        "ruby"
+    ]
+}

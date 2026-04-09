@@ -1,0 +1,9 @@
+{
+    "name": "httpx",
+    "homepage": "https://github.com/projectdiscovery/httpx",
+    "description": "httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.",
+    "dependency": [
+        "git",
+        "golang"
+    ]
+}

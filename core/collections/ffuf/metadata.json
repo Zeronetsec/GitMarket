@@ -1,0 +1,9 @@
+{
+    "name": "ffuf",
+    "homepage": "https://github.com/ffuf/ffuf",
+    "description": "Fast web fuzzer written in Go",
+    "dependency": [
+        "git",
+        "golang"
+    ]
+}

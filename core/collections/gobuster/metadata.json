@@ -1,0 +1,9 @@
+{
+    "name": "gobuster",
+    "homepage": "https://github.com/Oj/gobuster",
+    "description": "Directory/File, DNS and VHost busting tool written in Go",
+    "dependency": [
+        "git",
+        "golang"
+    ]
+}
