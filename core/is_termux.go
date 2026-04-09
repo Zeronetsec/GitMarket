@@ -7,10 +7,10 @@ import (
 )
 
 func isTermux() bool {
-    _, err := os.Stat(
-        "/data/data/com.termux/files/usr",
-    )
-    return err == nil
+    prefix := os.Getenv("PREFIX")
+    isPrefix := (prefix == "/data/data/com.termux/files/usr")
+    _, isTermuxVer := os.LookupEnv("TERMUX_VERSION")
+    return isPrefix && isTermuxVer
 }
 
 // Copyright (c) 2026 Zeronetsec
