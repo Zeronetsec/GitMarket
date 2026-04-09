@@ -43,7 +43,7 @@ func main() {
 
     if len(os.Args) < 3 {
         fmt.Printf(
-            "%s[!] %sNot input anything!\n",
+            "%s[!] %sInvalid input!\n",
             color.R, color.N,
         )
         return
