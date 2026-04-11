@@ -2,11 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/gitmarket" ]]; then
-    command rm -rf "${GMOPT}/gitmarket"
+    command rm -rfv "${GMOPT}/gitmarket"
 fi
 
 if [[ -x "${GMBIN}/gitmarket" ]]; then
-    command rm -f "${GMBIN}/gitmarket"
+    command rm -fv "${GMBIN}/gitmarket"
 fi
 
 # Copyright (c) 2026 Zeronetsec

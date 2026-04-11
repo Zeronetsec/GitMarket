@@ -3,6 +3,7 @@
     "homepage": "https://github.com/Zeronetsec/Rubytask",
     "description": "Rubytask is a lightweight CLI tool for managing tasks and notes with zero dependencies.",
     "dependency": [
-        "git"
+        "git",
+        "rubytask"
     ]
 }

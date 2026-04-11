@@ -1,33 +1,25 @@
 #!/usr/bin/env bash
 # GitMarket Project
 
-if [[ ! -d "${GMTMP}" ]]; then
-    command mkdir -p "${GMTMP}"
-fi
-
-if [[ -d "${GMTMP}/gospel" ]]; then
-    command rm -rf "${GMTMP}/gospel"
-fi
-
 if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -p "${GMOPT}"
+    command mkdir -pv "${GMOPT}"
 fi
 
 if [[ -d "${GMOPT}/gospel" ]]; then
-    command rm -rf "${GMOPT}/gospel"
+    command rm -rfv "${GMOPT}/gospel"
 fi
 
 if [[ -x "${GMBIN}/gospel" ]]; then
-    command rm -f "${GMBIN}/gospel"
+    command rm -fv "${GMBIN}/gospel"
 fi
 
 command git clone --depth 1 \
     'https://github.com/Zeronetsec/Gospel' \
-    "${GMTMP}/gospel"
+    "${GMOPT}/gospel"
 
-cd "${GMTMP}/gospel" || exit 1
-command chmod +x "install.sh"
-command bash "install.sh"
+cd "${GMOPT}/gospel"
+command go mod tidy
+command go build -v -o "${GMBIN}/gospel"
 cd
 
 # Copyright (c) 2026 Zeronetsec

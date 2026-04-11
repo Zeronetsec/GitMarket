@@ -2,11 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/hydra" ]]; then
-    command rm -rf "${GMOPT}/hydra"
+    command rm -rfv "${GMOPT}/hydra"
 fi
 
 if [[ -x "${GMBIN}/hydra" ]]; then
-    command rm -f "${GMBIN}/hydra"
+    command rm -fv "${GMBIN}/hydra"
 fi
 
 # Copyright (c) 2026 Zeronetsec

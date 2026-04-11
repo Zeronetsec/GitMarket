@@ -2,11 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/naabu" ]]; then
-    command rm -rf "${GMOPT}/naabu"
+    command rm -rfv "${GMOPT}/naabu"
 fi
 
 if [[ -x "${GMBIN}/naabu" ]]; then
-    command rm -f "${GMBIN}/naabu"
+    command rm -fv "${GMBIN}/naabu"
 fi
 
 # Copyright (c) 2026 Zeronetsec

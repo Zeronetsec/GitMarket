@@ -2,11 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/comet" ]]; then
-    command rm -rf "${GMOPT}/comet"
+    command rm -rfv "${GMOPT}/comet"
 fi
 
 if [[ -x "${GMBIN}/comet" ]]; then
-    command rm -f "${GMBIN}/comet"
+    command rm -fv "${GMBIN}/comet"
 fi
 
 # Copyright (c) 2026 Zeronetsec

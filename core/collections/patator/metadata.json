@@ -1,0 +1,16 @@
+{
+    "name": "patator",
+    "homepage": "https://github.com/lanjelot/patator",
+    "description": "Patator is a multi-purpose brute-forcer, with a modular design and a flexible usage.",
+    "dependency": [
+        "git",
+        "python3",
+        "python3-venv::python-venv",
+        "python3-pip::python-pip",
+        "libcurl",
+        "libgnutls",
+        "libcurl-static",
+        "openssl-tool",
+        "openssl"
+    ]
+}

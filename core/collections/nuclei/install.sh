@@ -2,22 +2,22 @@
 # GitMarket Project
 
 if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -p "${GMOPT}"
+    command mkdir -pv "${GMOPT}"
 fi
 
 if [[ -d "${GMOPT}/nuclei" ]]; then
-    command rm -rf "${GMOPT}/nuclei"
+    command rm -rfv "${GMOPT}/nuclei"
 fi
 
 if [[ -x "${GMBIN}/nuclei" ]]; then
-    command rm -f "${GMBIN}/nuclei"
+    command rm -fv "${GMBIN}/nuclei"
 fi
 
 command git clone --depth 1 \
     'https://github.com/projectdiscovery/nuclei' \
     "${GMOPT}/nuclei"
 
-cd "${GMOPT}/nuclei" || exit 1
+cd "${GMOPT}/nuclei"
 command go mod tidy
 command go build -v -o \
     "${GMBIN}/nuclei" \

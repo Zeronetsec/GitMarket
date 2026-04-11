@@ -2,11 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/rubytask" ]]; then
-    command rm -rf "${GMOPT}/rubytask"
+    command rm -rfv "${GMOPT}/rubytask"
 fi
 
 if [[ -x "${GMBIN}/rubytask" ]]; then
-    command rm -f "${GMBIN}/rubytask"
+    command rm -fv "${GMBIN}/rubytask"
 fi
 
 # Copyright (c) 2026 Zeronetsec

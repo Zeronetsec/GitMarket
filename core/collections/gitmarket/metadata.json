@@ -1,9 +1,11 @@
 {
     "name": "gitmarket",
     "homepage": "https://github.com/Zeronetsec/GitMarket",
-    "description": "GitMarket is a simple tool to install CLI tools from various repositories",
+    "description": "GitMarket is a simple tool to install CLI tools from various repositories.",
     "dependency": [
         "git",
-        "golang"
+        "golang",
+        "bash",
+        "coreutils"
     ]
 }

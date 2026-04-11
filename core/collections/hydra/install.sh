@@ -2,25 +2,25 @@
 # GitMarket Project
 
 if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -p "${GMOPT}"
+    command mkdir -pv "${GMOPT}"
 fi
 
 if [[ -d "${GMOPT}/hydra" ]]; then
-    command rm -rf "${GMOPT}/hydra"
+    command rm -rfv "${GMOPT}/hydra"
 fi
 
 if [[ -x "${GMBIN}/hydra" ]]; then
-    command rm -f "${GMBIN}/hydra"
+    command rm -fv "${GMBIN}/hydra"
 fi
 
 command git clone --depth 1 \
     'https://github.com/vanhauser-thc/thc-hydra' \
     "${GMOPT}/hydra"
 
-cd "${GMOPT}/hydra" || exit 1
+cd "${GMOPT}/hydra"
 ./configure
 command make
-command ln -sf "${GMOPT}/hydra/hydra" \
+command ln -sfv "${GMOPT}/hydra/hydra" \
     "${GMBIN}/hydra"
 cd
 

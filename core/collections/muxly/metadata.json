@@ -3,6 +3,11 @@
     "homepage": "https://github.com/Zeronetsec/Muxly",
     "description": "Muxly is a Swiss Army knife for Termux customization, including fonts, themes, cursor styles, shortcuts, and rootfs management.",
     "dependency": [
-        "git"
+        "git",
+        "bash",
+        "proot-distro",
+        "coreutils",
+        "gawk",
+        "grep"
     ]
 }

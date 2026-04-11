@@ -4,6 +4,7 @@
     "description": "A tool for reverse engineering Android apk files",
     "dependency": [
         "git",
+        "sed",
         "aapt",
         "openjdk-17",
         "wget"

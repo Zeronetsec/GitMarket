@@ -63,7 +63,7 @@ echo -e "\n${B}[*] ${N}Installing: ${GG}GitMarket${N}"
 pack=(
     "bash"
     "git"
-    "which"
+    "coreutils"
     "golang"
     "zip"
 )

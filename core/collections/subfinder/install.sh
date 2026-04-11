@@ -2,22 +2,22 @@
 # GitMarket Project
 
 if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -p "${GMOPT}"
+    command mkdir -pv "${GMOPT}"
 fi
 
 if [[ -d "${GMOPT}/subfinder" ]]; then
-    command rm -rf "${GMOPT}/subfinder"
+    command rm -rfv "${GMOPT}/subfinder"
 fi
 
 if [[ -x "${GMBIN}/subfinder" ]]; then
-    command rm -f "${GMBIN}/subfinder"
+    command rm -fv "${GMBIN}/subfinder"
 fi
 
 command git clone --depth 1 \
     'https://github.com/projectdiscovery/subfinder' \
     "${GMOPT}/subfinder"
 
-cd "${GMOPT}/subfinder" || exit 1
+cd "${GMOPT}/subfinder"
 command go mod tidy
 command go build -v -o \
     "${GMBIN}/subfinder" \

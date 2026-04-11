@@ -1,0 +1,9 @@
+{
+    "name": "nikto",
+    "homepage": "https://github.com/sullo/nikto",
+    "description": "Nikto web server scanner",
+    "dependency": [
+        "git",
+        "perl"
+    ]
+}

@@ -2,7 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/chprompt" ]]; then
-    command rm -rf "${GMOPT}/chprompt"
+    command rm -rfv "${GMOPT}/chprompt"
+fi
+
+if [[ ! -d "${GMTMP}" ]]; then
+	command mkdir -pv "${GMTMP}"
 fi
 
 command cat "${HOME}/.bashrc" | \

@@ -1,0 +1,9 @@
+{
+    "name": "gum",
+    "homepage": "https://github.com/charmbracelet/gum",
+    "description": "A tool for glamorous shell scripts",
+    "dependency": [
+        "git",
+        "golang"
+    ]
+}

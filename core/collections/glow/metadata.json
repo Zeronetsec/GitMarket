@@ -1,0 +1,9 @@
+{
+    "name": "glow",
+    "homepage": "https://github.com/charmbracelet/glow",
+    "description": "Render markdown on the CLI, with pizzazz!",
+    "dependency": [
+        "git",
+        "golang"
+    ]
+}

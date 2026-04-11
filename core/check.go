@@ -42,7 +42,7 @@ func Check(name string) {
 
     if fileExists(optPath) {
         fmt.Printf(
-            "%sPath: %s%s%s\n",
+            "%sSource: %s%s%s\n",
             color.N, color.GG, optPath, color.N,
         )
     }

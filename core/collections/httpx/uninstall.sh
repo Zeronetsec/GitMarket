@@ -2,11 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/httpx" ]]; then
-    command rm -rf "${GMOPT}/httpx"
+    command rm -rfv "${GMOPT}/httpx"
 fi
 
 if [[ -x "${GMBIN}/httpx" ]]; then
-    command rm -f "${GMBIN}/httpx"
+    command rm -fv "${GMBIN}/httpx"
 fi
 
 # Copyright (c) 2026 Zeronetsec

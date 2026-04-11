@@ -2,11 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/apktool" ]]; then
-    command rm -rf "${GMOPT}/apktool"
+    command rm -rfv "${GMOPT}/apktool"
 fi
 
 if [[ -x "${GMBIN}/apktool" ]]; then
-    command rm -f "${GMBIN}/apktool"
+    command rm -fv "${GMBIN}/apktool"
 fi
 
 # Copyright (c) 2026 Zeronetsec

@@ -3,6 +3,7 @@
     "homepage": "https://github.com/Zeronetsec/Gospel",
     "description": "Gospel is a CLI toolkit for system exploration, security auditing, and data inspection.",
     "dependency": [
-        "git"
+        "git",
+        "golang"
     ]
 }

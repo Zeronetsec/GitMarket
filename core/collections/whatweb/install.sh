@@ -2,24 +2,25 @@
 # GitMarket Project
 
 if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -p "${GMOPT}"
+    command mkdir -pv "${GMOPT}"
 fi
 
 if [[ -d "${GMOPT}/whatweb" ]]; then
-    command rm -rf "${GMOPT}/whatweb"
+    command rm -rfv "${GMOPT}/whatweb"
 fi
 
 if [[ -x "${GMBIN}/whatweb" ]]; then
-    command rm -f "${GMBIN}/whatweb"
+    command rm -fv "${GMBIN}/whatweb"
 fi
 
 command git clone --depth 1 \
     'https://github.com/urbanadventurer/WhatWeb' \
     "${GMOPT}/whatweb"
 
-cd "${GMOPT}/whatweb" || exit 1
+cd "${GMOPT}/whatweb"
 command bundle install
-command ln -sf \
+command chmod +x -Rv "${GMOPT}/whatweb"
+command ln -sfv \
     "${GMOPT}/whatweb/whatweb" \
     "${GMBIN}/whatweb"
 cd

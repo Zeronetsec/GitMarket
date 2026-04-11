@@ -2,11 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/gospel" ]]; then
-    command rm -rf "${GMOPT}/gospel"
+    command rm -rfv "${GMOPT}/gospel"
 fi
 
 if [[ -x "${GMBIN}/gospel" ]]; then
-    command rm -f "${GMBIN}/gospel"
+    command rm -fv "${GMBIN}/gospel"
 fi
 
 # Copyright (c) 2026 Zeronetsec

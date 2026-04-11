@@ -1,33 +1,25 @@
 #!/usr/bin/env bash
 # GitMarket Project
 
-if [[ ! -d "${GMTMP}" ]]; then
-    command mkdir -p "${GMTMP}"
-fi
-
-if [[ -d "${GMTMP}/muxly" ]]; then
-    command rm -rf "${GMTMP}/muxly"
-fi
-
 if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -p "${GMOPT}"
+    command mkdir -pv "${GMOPT}"
 fi
 
 if [[ -d "${GMOPT}/muxly" ]]; then
-    command rm -rf "${GMOPT}/muxly"
+    command rm -rfv "${GMOPT}/muxly"
 fi
 
 if [[ -x "${GMBIN}/muxly" ]]; then
-    command rm -f "${GMBIN}/muxly"
+    command rm -fv "${GMBIN}/muxly"
 fi
 
 command git clone --depth 1 \
     'https://github.com/Zeronetsec/Muxly' \
-    "${GMTMP}/muxly"
+    "${GMOPT}/muxly"
 
-cd "${GMTMP}/muxly" || exit 1
-command chmod +x "install.sh"
-command bash "install.sh"
-cd
+command chmod +x -Rv "${GMOPT}/muxly"
+command ln -sfv \
+    "${GMOPT}/muxly/muxly.sh" \
+    "${GMBIN}/muxly"
 
 # Copyright (c) 2026 Zeronetsec

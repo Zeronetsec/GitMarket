@@ -4,6 +4,10 @@
     "Description": "Chprompt is a lightweight tool for switching Linux prompts instantly with 100+ built-in styles and zero dependencies.",
     "Dependency": [
         "git",
-        "bash"
+        "bash",
+        "coreutils",
+        "sed",
+        "grep",
+        "gawk"
     ]
 }

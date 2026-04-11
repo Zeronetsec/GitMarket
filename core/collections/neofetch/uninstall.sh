@@ -2,11 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/neofetch" ]]; then
-    command rm -rf "${GMOPT}/neofetch"
+    command rm -rfv "${GMOPT}/neofetch"
 fi
 
 if [[ -x "${GMBIN}/neofetch" ]]; then
-    command rm -f "${GMBIN}/neofetch"
+    command rm -fv "${GMBIN}/neofetch"
 fi
 
 # Copyright (c) 2026 Zeronetsec

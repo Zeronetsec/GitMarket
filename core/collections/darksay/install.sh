@@ -2,23 +2,23 @@
 # GitMarket Project
 
 if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -p "${GMOPT}"
+    command mkdir -pv "${GMOPT}"
 fi
 
 if [[ -d "${GMOPT}/darksay" ]]; then
-    command rm -rf "${GMOPT}/darksay"
+    command rm -rfv "${GMOPT}/darksay"
 fi
 
 if [[ -x "${GMBIN}/darksay" ]]; then
-    command rm -f "${GMBIN}/darksay"
+    command rm -fv "${GMBIN}/darksay"
 fi
 
 command git clone --depth 1 \
     'https://github.com/Blziko/darksay' \
     "${GMOPT}/darksay"
 
-command chmod +x -R "${GMOPT}/darksay"
-command ln -sf \
+command chmod +x -Rv "${GMOPT}/darksay"
+command ln -sfv \
     "${GMOPT}/darksay/darksay.rb" \
     "${GMBIN}/darksay"
 

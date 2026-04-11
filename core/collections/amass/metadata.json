@@ -1,0 +1,9 @@
+{
+    "name": "amass",
+    "homepage": "https://github.com/owasp-amass/amass",
+    "description": "In-depth attack surface mapping and asset discovery",
+    "dependency": [
+        "git",
+        "golang"
+    ]
+}

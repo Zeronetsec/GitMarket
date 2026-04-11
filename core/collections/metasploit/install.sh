@@ -8,13 +8,12 @@ function for_linux() {
         > msfinstall
     command chmod 755 msfinstall
     ./msfinstall
-    command rm -rf "${GMTMP}/metasploit"
+    command rm -rfv "${GMTMP}/metasploit"
     cd
 }
 
 function for_termux() {
-    echo "WARNING!!!"
-    echo "this actions can remove and broke your rootfs data, do you want to continue?"
+    echo "Warning: this actions can remove and broke your rootfs data, do you want to continue?"
     read -p "y/n: " sel
     if [[ "$sel" == "n" ]]; then
         exit 1
@@ -61,9 +60,9 @@ command apt \
 
 command apt install metasploit-framework -y
 EOF
-        command chmod +x "${PREFIX}/var/lib/proot-distro/installed-rootfs/metasploit/root/msfinstall.sh"
+        command chmod +x -v "${PREFIX}/var/lib/proot-distro/installed-rootfs/metasploit/root/msfinstall.sh"
         command proot-distro login metasploit -- bash '/root/msfinstall.sh'
-        command rm -f "${PREFIX}/var/lib/proot-distro/installed-rootfs/metasploit/root/msfinstall.sh"
+        command rm -fv "${PREFIX}/var/lib/proot-distro/installed-rootfs/metasploit/root/msfinstall.sh"
 
         command cat > \
             "${GMBIN}/msfconsole" \
@@ -71,7 +70,7 @@ EOF
 #!/usr/bin/env bash
 exec proot-distro login metasploit -- msfconsole "${@}"
 EOF
-        command chmod +x "${GMBIN}/msfconsole"
+        command chmod +x -v "${GMBIN}/msfconsole"
 
         command cat > \
             "${GMBIN}/msfvenom" \
@@ -79,7 +78,7 @@ EOF
 #!/usr/bin/env bash
 exec proot-distro login metasploit -- msfvenom "${@}"
 EOF
-        command chmod +x "${GMBIN}/msfvenom"
+        command chmod +x -v "${GMBIN}/msfvenom"
     }
 
     if [[ -d "${PREFIX}/var/lib/proot-distro/installed-rootfs/debian" ]]; then
@@ -99,37 +98,37 @@ EOF
 }
 
 if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -p "${GMOPT}"
+    command mkdir -pv "${GMOPT}"
 fi
 
 if [[ -d "${GMOPT}/metasploit-framework" ]]; then
-    command rm -rf "${GMOPT}/metasploit-framework"
+    command rm -rfv "${GMOPT}/metasploit-framework"
 fi
 
 if [[ -d "${GMTMP}/metasploit" ]]; then
-    command rm -rf "${GMTMP}/metasploit"
+    command rm -rfv "${GMTMP}/metasploit"
 fi
 
 if [[ -x "${GMBIN}/msfconsole" ]]; then
-    command rm -f "${GMBIN}/msfconsole"
+    command rm -fv "${GMBIN}/msfconsole"
 fi
 
 if [[ -x "${GMBIN}/msfvenom" ]]; then
-    command rm -f "${GMBIN}/msfvenom"
+    command rm -fv "${GMBIN}/msfvenom"
 fi
 
-command mkdir -p "${GMTMP}/metasploit"
+command mkdir -pv "${GMTMP}/metasploit"
 
 if [[ -d "${GMOPT}/metasploit" ]]; then
-    command rm -rf "${GMOPT}/metasploit"
+    command rm -rfv "${GMOPT}/metasploit"
 fi
 
-command mkdir -p "${GMOPT}/metasploit"
+command mkdir -pv "${GMOPT}/metasploit"
 
 if [[ "${GMENV}" == "termux" ]]; then
-    for_termux || exit 1
+    for_termux
 elif [[ "${GMENV}" == "linux" ]]; then
-    for_linux || exit 1
+    for_linux
 fi
 
 # Copyright (c) 2026 Zeronetsec

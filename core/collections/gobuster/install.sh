@@ -2,22 +2,22 @@
 # GitMarkwt Project
 
 if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -p "${GMOPT}"
+    command mkdir -pv "${GMOPT}"
 fi
 
 if [[ -d "${GMOPT}/gobuster" ]]; then
-    command rm -rf "${GMOPT}/gobuster"
+    command rm -rfv "${GMOPT}/gobuster"
 fi
 
 if [[ -x "${GMBIN}/gobuster" ]]; then
-    command rm -f "${GMBIN}/gobuster"
+    command rm -fv "${GMBIN}/gobuster"
 fi
 
 command git clone --depth 1 \
     'https://github.com/Oj/gobuster' \
     "${GMOPT}/gobuster"
 
-cd "${GMOPT}/gobuster" || exit 1
+cd "${GMOPT}/gobuster"
 command go mod tidy
 command go build -v -o "${GMBIN}/gobuster"
 cd

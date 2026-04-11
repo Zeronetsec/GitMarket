@@ -2,11 +2,11 @@
 # GitMarket Project
 
 if [[ -d "${GMOPT}/sqlmap" ]]; then
-    command rm -rf "${GMOPT}/sqlmap"
+    command rm -rfv "${GMOPT}/sqlmap"
 fi
 
 if [[ -x "${GMBIN}/sqlmap" ]]; then
-    command rm -f "${GMBIN}/sqlmap"
+    command rm -fv "${GMBIN}/sqlmap"
 fi
 
 # Copyright (c) 2026 Zeronetsec

@@ -2,22 +2,22 @@
 # GitMarket Project
 
 if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -p "${GMOPT}"
+    command mkdir -pv "${GMOPT}"
 fi
 
 if [[ -d "${GMOPT}/katana" ]]; then
-    command rm -rf "${GMOPT}/katana"
+    command rm -rfv "${GMOPT}/katana"
 fi
 
 if [[ -x "${GMBIN}/katana" ]]; then
-    command rm -f "${GMBIN}/katana"
+    command rm -fv "${GMBIN}/katana"
 fi
 
 command git clone --depth 1 \
     'https://github.com/projectdiscovery/katana' \
     "${GMOPT}/katana"
 
-cd "${GMOPT}/katana" || exit 1
+cd "${GMOPT}/katana"
 command go mod tidy
 command go build -v -o \
     "${GMBIN}/katana" \
