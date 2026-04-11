@@ -89,6 +89,11 @@ func Uninstall(name string) {
         color.YY, color.N, color.GG, name, color.N,
     )
 
+    fmt.Printf(
+        "%s[*] %sRunning uninstall script: %s%s/uninstall.sh%s\n",
+        color.B, color.N, color.GG, name, color.N,
+    )
+
     SetupEnv(name)
     cmd := exec.Command("bash", tmpFile.Name())
 
@@ -100,7 +105,7 @@ func Uninstall(name string) {
     err = cmd.Run()
     if err != nil {
         fmt.Printf(
-            "%s[!] %sUninstall failed: %s%v%s\n",
+            "%s[!] %sUninstall script failed: %s%v%s\n",
             color.R, color.N, color.GG, err, color.N,
         )
         return

@@ -15,6 +15,7 @@ Built to avoid doing the same setup steps over and over again.
 
 - [amass](https://github.com/owasp-amass/amass)
 - [apktool](https://github.com/iBotPeaches/Apktool)
+- [arjun](https://github.com/s0md3v/Arjun)
 - [assetfinder](https://github.com/tomnomnom/assetfinder)
 - [chprompt](https://github.com/Zeronetsec/Chprompt)
 - [comet](https://github.com/Zeronetsec/Comet)
@@ -39,6 +40,7 @@ Built to avoid doing the same setup steps over and over again.
 - [patator](https://github.com/lanjelot/patator)
 - [rclone](https://github.com/rclone/rclone)
 - [rubytask](https://github.com/Zeronetsec/Rubytask)
+- [sherlock](https://github.com/sherlock-project/sherlock)
 - [slowhttptest](https://github.com/shekyan/slowhttptest)
 - [sqlmap](https://github.com/sqlmapproject/sqlmap)
 - [subfinder](https://github.com/projectdiscovery/subfinder)

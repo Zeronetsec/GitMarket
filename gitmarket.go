@@ -43,8 +43,12 @@ func main() {
 
     if len(os.Args) < 3 {
         fmt.Printf(
-            "%s[!] %sInvalid input!\n",
-            color.R, color.N,
+            "%s[!] %sUnknown command: %s%s%s\n",
+            color.R, color.N, color.GG, os.Args[1], color.N,
+        )
+        fmt.Printf(
+            "%s[!] %sTry: %sgitmarket --help%s\n",
+            color.R, color.N, color.GG, color.N,
         )
         return
     }
@@ -68,6 +72,10 @@ func main() {
             fmt.Printf(
                 "%s[!] %sUnknown command: %s%s%s\n",
                 color.R, color.N, color.GG, command, color.N,
+            )
+            fmt.Printf(
+                "%s[!] %sTry: %sgitmarket --help%s\n",
+                color.R, color.N, color.GG, color.N,
             )
             return
     }

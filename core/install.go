@@ -133,7 +133,7 @@ func Install(name string) {
     }
 
     fmt.Printf(
-        "%s[*] %sRunning install script: %s%s%s\n",
+        "%s[*] %sRunning install script: %s%s/install.sh%s\n",
         color.B, color.N, color.GG, name, color.N,
     )
 

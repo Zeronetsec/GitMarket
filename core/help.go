@@ -13,7 +13,7 @@ func Help() {
 
     utils.BirthDay()
     fmt.Printf(
-        "%sUsage: %s%s %s<command> [<argument>]%s\n",
+        "%sUsage: %s%s %s<command> [<args>]%s\n",
         color.N, color.GG, name, color.BB, color.N,
     )
 

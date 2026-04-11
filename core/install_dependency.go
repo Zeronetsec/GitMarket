@@ -13,14 +13,14 @@ func installDependency(pkgManager string, dep string) error {
 
     for _, pkg := range parts {
         fmt.Printf(
-            "%s[*] %sTrying dependency: %s%s%s\n",
+            "%s[*] %sInstalling dependency: %s%s%s\n",
             color.B, color.N, color.GG, pkg, color.N,
         )
 
         err := runInstall(pkgManager, pkg)
         if err == nil {
             fmt.Printf(
-                "%s[+] %sInstalled dependency: %s%s%s\n",
+                "%s[+] %sDependency: %s%s %sinstalled\n",
                 color.GG, color.N, color.GG, pkg, color.N,
             )
             return nil
