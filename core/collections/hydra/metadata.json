@@ -6,7 +6,6 @@
         "git",
         "make",
         "clang",
-        "add-apt-key",
         "gcc::libllvm",
         "g++::libllvm",
         "libssl-dev::libssl",
