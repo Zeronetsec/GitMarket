@@ -64,21 +64,43 @@ EOF
         command proot-distro login metasploit -- bash '/root/msfinstall.sh'
         command rm -fv "${PREFIX}/var/lib/proot-distro/installed-rootfs/metasploit/root/msfinstall.sh"
 
-        command cat > \
-            "${GMBIN}/msfconsole" \
-        << 'EOF'
-#!/usr/bin/env bash
-exec proot-distro login metasploit -- msfconsole "${@}"
-EOF
-        command chmod +x -v "${GMBIN}/msfconsole"
+        msfbin=(
+            "msf-egghunter"
+            "msf-exe2vba"
+            "msf-exe2vbs"
+            "msf-find_badchars"
+            "msf-halflm_second"
+            "msf-hmac_sha1_crack"
+            "msf-java_deserializer"
+            "msf-jsobfu"
+            "msf-makeiplist"
+            "msf-md5_lookup"
+            "msf-metasm_shell"
+            "msf-msf_irb_shell"
+            "msf-nasm_shell"
+            "msf-pattern_create"
+            "msf-pattern_offset"
+            "msf-pdf2xdp"
+            "msf-virustotal"
+            "msfconsole"
+            "msfd"
+            "msfdb"
+            "msfrpc"
+            "msfrpcd"
+            "msfupdate"
+            "msfvenom"
+        )
 
-        command cat > \
-            "${GMBIN}/msfvenom" \
-            << 'EOF'
-#!/usr/bin/env bash
-exec proot-distro login metasploit -- msfvenom "${@}"
-EOF
-        command chmod +x -v "${GMBIN}/msfvenom"
+        for x in "${msfbin[@]}"; do
+            if [[ -x "${PREFIX}/var/lib/proot-distro/installed-rootfs/metasploit/usr/bin/${x}" ]]; then
+                echo '#!/usr/bin/env bash' \
+                    > "${GMBIN}/${x}"
+                echo -e \
+                    "exec proot-distro login metasploit -- ${x} \"\${@}\"" \
+                    > "${GMBIN}/${x}"
+                command chmod +x -v "${GMBIN}/${x}"
+            fi
+        done
     }
 
     if [[ -d "${PREFIX}/var/lib/proot-distro/installed-rootfs/debian" ]]; then
@@ -109,12 +131,8 @@ if [[ -d "${GMTMP}/metasploit" ]]; then
     command rm -rfv "${GMTMP}/metasploit"
 fi
 
-if [[ -x "${GMBIN}/msfconsole" ]]; then
-    command rm -fv "${GMBIN}/msfconsole"
-fi
-
-if [[ -x "${GMBIN}/msfvenom" ]]; then
-    command rm -fv "${GMBIN}/msfvenom"
+if [[ -x "${GMBIN}/metasploit" ]]; then
+    command rm -fv "${GMBIN}/metasploit"
 fi
 
 command mkdir -pv "${GMTMP}/metasploit"
@@ -123,12 +141,50 @@ if [[ -d "${GMOPT}/metasploit" ]]; then
     command rm -rfv "${GMOPT}/metasploit"
 fi
 
-command mkdir -pv "${GMOPT}/metasploit"
+msfbin=(
+    "msf-egghunter"
+    "msf-exe2vba"
+    "msf-exe2vbs"
+    "msf-find_badchars"
+    "msf-halflm_second"
+    "msf-hmac_sha1_crack"
+    "msf-java_deserializer"
+    "msf-jsobfu"
+    "msf-makeiplist"
+    "msf-md5_lookup"
+    "msf-metasm_shell"
+    "msf-msf_irb_shell"
+    "msf-nasm_shell"
+    "msf-pattern_create"
+    "msf-pattern_offset"
+    "msf-pdf2xdp"
+    "msf-virustotal"
+    "msfconsole"
+    "msfd"
+    "msfdb"
+    "msfrpc"
+    "msfrpcd"
+    "msfupdate"
+    "msfvenom"
+)
+
+for x in "${msfbin[@]}"; do
+    if [[ -x "${GMBIN}/${x}" ]]; then
+        command rm -fv "${GMBIN}/${x}"
+    fi
+done
 
 if [[ "${GMENV}" == "termux" ]]; then
     for_termux
 elif [[ "${GMENV}" == "linux" ]]; then
     for_linux
 fi
+
+command mkdir -pv "${GMOPT}/metasploit"
+echo '#!/usr/bin/env bash' \
+    > "${GMBIN}/metasploit"
+echo 'echo "this is placeholder for gitmarket!"' \
+    >> "${GMBIN}/metasploit"
+command chmod +x -v "${GMBIN}/metasploit"
 
 # Copyright (c) 2026 Zeronetsec
