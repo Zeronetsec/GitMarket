@@ -4,11 +4,7 @@
 function for_termux() {
     cd "${GMOPT}/holehe"
     command pip install --upgrade pip setuptools wheel
-
-    if ! command python3 -c "import requests"; then
-        command pip install requests
-    fi
-
+    command pip install requests
     command pip install .
     cd
 }
@@ -18,11 +14,7 @@ function for_linux() {
     command python3 -m venv holehe_venv
     source "holehe_venv/bin/activate"
     command pip install --upgrade pip setuptools wheel
-
-    if ! command python3 -c "import requests"; then
-        command pip install requests
-    fi
-
+    command pip install requests
     command pip install .
     deactivate
     cd
@@ -32,7 +24,7 @@ function for_linux() {
         > "${GMBIN}/holehe"
 
     echo -e \
-        "exec ${GMOPT}/holehe/holehe_venv/bin/python3 -m holehe \"\${@}\"" \
+        "exec ${GMOPT}/holehe/holehe_venv/bin/python3 ${GMOPT}/holehe/holehe_venv/bin/holehe \"\${@}\"" \
         >> "${GMBIN}/holehe"
 
     command chmod +x -v "${GMBIN}/holehe"

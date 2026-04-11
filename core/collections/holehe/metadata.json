@@ -6,7 +6,6 @@
         "git",
         "python3",
         "python3-pip::python-pip",
-        "python3-venv::python-venv",
-        "python3-requests::python-requests"
+        "python3-venv::python-venv"
     ]
 }

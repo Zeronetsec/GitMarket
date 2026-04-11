@@ -17,7 +17,7 @@ command git clone --depth 1 \
     'https://github.com/sullo/nikto' \
     "${GMOPT}/nikto"
 
-command cpan install JSON XML::Writer
+command cpan install JSON XML::Writer Net::SSLeay
 command chmod +x -Rv "${GMOPT}/nikto"
 command ln -sfv \
     "${GMOPT}/nikto/program/nikto.pl" \
