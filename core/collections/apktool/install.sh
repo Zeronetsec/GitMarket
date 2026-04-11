@@ -22,7 +22,7 @@ command wget \
     'https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.10.0.jar' \
     -O "${GMOPT}/apktool/apktool.jar"
 
-command chmod +x -v "${GMOPT}/apktool"
+command chmod +x -Rv "${GMOPT}/apktool"
 command sed -i \
     "s|libdir=.*|libdir=\"${GMOPT}/apktool\"|g" \
     "${GMOPT}/apktool/apktool"
