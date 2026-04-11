@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 # GitMarket Project
 
+cpanmod=(
+    "JSON"
+    "XML::Writer"
+    "Net::SSLeay"
+)
+
 if [[ ! -d "${GMOPT}" ]]; then
     command mkdir -pv "${GMOPT}"
 fi
@@ -17,7 +23,7 @@ command git clone --depth 1 \
     'https://github.com/sullo/nikto' \
     "${GMOPT}/nikto"
 
-command cpan install JSON XML::Writer Net::SSLeay
+command cpan install "${cpanmod[@]}"
 command chmod +x -Rv "${GMOPT}/nikto"
 command ln -sfv \
     "${GMOPT}/nikto/program/nikto.pl" \

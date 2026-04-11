@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 # GitMarket Project
 
+pipmod=(
+    "pip"
+    "setuptools"
+    "wheel"
+    "requests"
+)
+
 function for_termux() {
     cd "${GMOPT}/holehe"
-    command pip install --upgrade pip setuptools wheel
-    command pip install requests
+    command pip install --upgrade "${pipmod[@]}"
     command pip install .
     cd
 }
@@ -13,8 +19,7 @@ function for_linux() {
     cd "${GMOPT}/holehe"
     command python3 -m venv holehe_venv
     source "holehe_venv/bin/activate"
-    command pip install --upgrade pip setuptools wheel
-    command pip install requests
+    command pip install --upgrade "${pipmod[@]}"
     command pip install .
     deactivate
     cd
