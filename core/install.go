@@ -84,7 +84,6 @@ func Install(name string) {
                 "%s[!] %sFailed dependency: %s%s%s\n",
                 color.R, color.N, color.GG, dep, color.N,
             )
-            return
         }
     }
 

@@ -88,7 +88,7 @@ EOF
     command proot-distro install debian
 
     if [[ ! -d "${PREFIX}/var/lib/proot-distro/installed-rootfs/metasploit" ]]; then
-        command proot-distro renmae debian metasploit
+        command proot-distro rename debian metasploit
         install_metasploit
     else
         command proot-distro remove metasploit
