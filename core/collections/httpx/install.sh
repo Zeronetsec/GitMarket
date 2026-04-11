@@ -21,7 +21,7 @@ cd "${GMOPT}/httpx"
 command go mod tidy
 command go build -v -o \
     "${GMBIN}/httpx" \
-    "cmd/httpx/main.go"
+    "cmd/httpx/httpx.go"
 cd
 
 # Copyright (c) 2026 Zeronetsec
