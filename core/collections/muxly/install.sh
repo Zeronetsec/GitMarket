@@ -6,13 +6,13 @@ if [[ ! -d "${GMOPT}" ]]; then
 fi
 
 if [[ ! -d "${GMTMP}" ]]; then
-    command mkdir -p "${GMTMP}"
+    command mkdir -pv "${GMTMP}"
 fi
 
-command rm -fv "${GMTMP}/muxly_config.conf"
 if [[ -f "${GMOPT}/muxly/config/config.conf" ]]; then
-    command cat "${GMOPT}/muxly/config/config.conf" \
-        > "${GMTMP}/muxly_config.conf"
+    command cp -fv \
+        "${GMOPT}/muxly/config/config.conf" \
+        "${GMTMP}/muxly_config.conf"
 fi
 
 if [[ -d "${GMOPT}/muxly" ]]; then
@@ -27,8 +27,10 @@ command git clone --depth 1 \
     'https://github.com/Zeronetsec/Muxly' \
     "${GMOPT}/muxly"
 
-command cat "${GMTMP}/muxly_config.conf" \
-    > "${GMOPT}/muxly/config/config.conf"
+command cp -fv \
+    "${GMTMP}/muxly_config.conf" \
+    "${GMOPT}/muxly/config/config.conf"
+command rm -fv "${GMTMP}/muxly_config.conf"
 
 command chmod +x -Rv "${GMOPT}/muxly"
 command ln -sfv \
