@@ -29,7 +29,7 @@ command git clone --depth 1 \
 
 command chmod +x -Rv "${GMOPT}/chprompt"
 command cat "${HOME}/.bashrc" | \
-    command grep -Ev "source .*/chprompt/chprompt.sh|chprompt --use" \
+    command grep -Ev "source .*/chprompt/chprompt.sh|chprompt --use .*" \
     > "${GMTMP}/.bashrc.tmp" || true
 
 current_theme="$(
