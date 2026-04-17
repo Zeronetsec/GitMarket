@@ -7,18 +7,6 @@ cpanmod=(
     "Net::SSLeay"
 )
 
-if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -pv "${GMOPT}"
-fi
-
-if [[ -d "${GMOPT}/nikto" ]]; then
-    command rm -rfv "${GMOPT}/nikto"
-fi
-
-if [[ -x "${GMBIN}/nikto" ]]; then
-    command rm -fv "${GMBIN}/nikto"
-fi
-
 command git clone --depth 1 \
     'https://github.com/sullo/nikto' \
     "${GMOPT}/nikto"

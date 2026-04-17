@@ -44,76 +44,73 @@ func Uninstall(name string) {
     )
 
     data, err := uninstallScripts.ReadFile(scriptPath)
-    if err != nil {
-        fmt.Printf(
-            "%s[!] %sUninstaller for: %s%s %snot found!\n",
-            color.R, color.N, color.GG, name, color.N,
-        )
-        return
-    }
-
-    tmpFile, err := os.CreateTemp(
-        "", name+"-uninstall-*.sh",
-    )
-
-    if err != nil {
-        fmt.Printf(
-            "%s[!] %sFailed create temporary file!\n",
-            color.R, color.N,
-        )
-        return
-    }
-    defer os.Remove(tmpFile.Name())
-
-    _, err = tmpFile.Write(data)
-    if err != nil {
-        fmt.Printf(
-            "%s[!] %sFailed write script\n",
-            color.R, color.N,
-        )
-        return
-    }
-    tmpFile.Close()
-
-    err = os.Chmod(tmpFile.Name(), 0755)
-    if err != nil {
-        fmt.Printf(
-            "%s[!] %sFailed set permission!\n",
-            color.R, color.N,
-        )
-        return
-    }
 
     fmt.Printf(
         "%s[-] %sUninstalling: %s%s%s\n",
-        color.YY, color.N, color.GG, name, color.N,
+        color.YY, color.N, color.GG, name,color.N,
     )
 
-    fmt.Printf(
-        "%s[*] %sRunning uninstall script: %s%s/uninstall.sh%s\n",
-        color.B, color.N, color.GG, name, color.N,
-    )
-
-    SetupEnv(name)
-    cmd := exec.Command("bash", tmpFile.Name())
-
-    cmd.Env = os.Environ()
-    cmd.Stdout = os.Stdout
-    cmd.Stderr = os.Stderr
-    cmd.Stdin = os.Stdin
-
-    err = cmd.Run()
-    if err != nil {
-        fmt.Printf(
-            "%s[!] %sUninstall script failed: %s%v%s\n",
-            color.R, color.N, color.GG, err, color.N,
+    if err == nil {
+        tmpFile, err := os.CreateTemp(
+            "", name+"-uninstall-*.sh",
         )
-        return
+
+        if err != nil {
+            fmt.Printf(
+                "%s[!] %sFailed create temporary file!\n",
+                color.R, color.N,
+            )
+            return
+        }
+        defer os.Remove(tmpFile.Name())
+
+        _, err = tmpFile.Write(data)
+        if err != nil {
+            fmt.Printf(
+                "%s[!] %sFailed write script!\n",
+                color.R, color.N,
+            )
+            return
+        }
+        tmpFile.Close()
+
+        err = os.Chmod(tmpFile.Name(), 0755)
+        if err != nil {
+            fmt.Printf(
+                "%s[!] %sFailed set permission!\n",
+                color.R, color.N,
+            )
+            return
+        }
+
+        fmt.Printf(
+            "%s[*] %sRunning uninstall script: %s%s/uninstall.sh%s\n",
+            color.B, color.N, color.GG, name, color.N,
+        )
+
+        SetupEnv(name)
+
+        cmd := exec.Command("bash", tmpFile.Name())
+        cmd.Env = os.Environ()
+        cmd.Stdout = os.Stdout
+        cmd.Stderr = os.Stderr
+        cmd.Stdin = os.Stdin
+
+        err = cmd.Run()
+        if err != nil {
+            fmt.Printf(
+                "%s[!] %sUninstall script failed: %s%v%s\n",
+                color.R, color.N, color.GG, err, color.N,
+            )
+            return
+        }
+    } else {
+        CleanTarget(name)
     }
 
     fmt.Printf(
-        "%s[+] %sSuccessfully uninstalled: %s%s%s\n",
-        color.GG, color.N, color.GG, name, color.N,
+        "%s[*] %sSuccessfully uninstalled: %s%s%s\n",
+        color.B, color.N, color.GG, name, color.N,
     )
 }
 

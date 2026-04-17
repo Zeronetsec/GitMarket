@@ -1,9 +1,0 @@
-{
-    "name": "darksay",
-    "homepage": "https://github.com/Blziko/darksay",
-    "description": "random dark quotes",
-    "dependency": [
-        "git",
-        "ruby"
-    ]
-}

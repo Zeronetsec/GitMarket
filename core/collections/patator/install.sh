@@ -29,18 +29,6 @@ function for_linux() {
     cd
 }
 
-if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -pv "${GMOPT}"
-fi
-
-if [[ -d "${GMOPT}/patator" ]]; then
-    command rm -rfv "${GMOPT}/patator"
-fi
-
-if [[ -x "${GMBIN}/patator" ]]; then
-    command rm -fv "${GMBIN}/patator"
-fi
-
 command git clone --depth 1 \
     'https://github.com/lanjelot/patator' \
     "${GMOPT}/patator"

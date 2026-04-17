@@ -35,18 +35,6 @@ function for_linux() {
     command chmod +x -v "${GMBIN}/arjun"
 }
 
-if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -pv "${GMOPT}"
-fi
-
-if [[ -d "${GMOPT}/arjun" ]]; then
-    command rm -rf "${GMOPT}/arjun"
-fi
-
-if [[ -x "${GMBIN}/arjun" ]]; then
-    command rm -fv "${GMBIN}/arjun"
-fi
-
 command git clone --depth 1 \
     'https://github.com/s0md3v/Arjun' \
     "${GMOPT}/arjun"

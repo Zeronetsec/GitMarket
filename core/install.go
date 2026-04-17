@@ -40,6 +40,18 @@ func Install(name string) {
         return
     }
 
+    CleanTarget(name)
+
+    if !CheckConnection() {
+        fmt.Printf(
+            "%s[!] %sNo connection!\n",
+            color.R, color.N,
+        )
+        return
+    }
+
+    EnsureDirs()
+
     pkgManager := detectPkgManager()
     if pkgManager == "" {
         fmt.Printf(

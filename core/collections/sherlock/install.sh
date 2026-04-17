@@ -34,18 +34,6 @@ function for_linux() {
     command chmod +x -v "${GMBIN}/sherlock"
 }
 
-if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -pv "${GMOPT}"
-fi
-
-if [[ -d "${GMOPT}/sherlock" ]]; then
-    command rm -rfv "${GMOPT}/sherlock"
-fi
-
-if [[ -x "${GMBIN}/sherlock" ]]; then
-    command rm -fv "${GMBIN}/sherlock"
-fi
-
 command git clone --depth 1 \
     'https://github.com/sherlock-project/sherlock' \
     "${GMOPT}/sherlock"

@@ -1,18 +1,6 @@
 #!/usr/bin/env bash
 # GitMarket Project
 
-if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -pv "${GMOPT}"
-fi
-
-if [[ -d "${GMOPT}/apktool" ]]; then
-    command rm -rfv "${GMOPT}/apktool"
-fi
-
-if [[ -x "${GMBIN}/apktool" ]]; then
-    command rm -fv "${GMBIN}/apktool"
-fi
-
 command mkdir -pv "${GMOPT}/apktool"
 command wget \
     'https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool' \

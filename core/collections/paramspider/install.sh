@@ -5,20 +5,19 @@ pipmod=(
     "pip"
     "setuptools"
     "wheel"
-    "requests"
 )
 
 function for_termux() {
-    cd "${GMOPT}/holehe"
+    cd "${GMOPT}/paramspider"
     command pip install --upgrade "${pipmod[@]}"
     command pip install .
     cd
 }
 
 function for_linux() {
-    cd "${GMOPT}/holehe"
-    command python3 -m venv holehe_venv
-    source "holehe_venv/bin/activate"
+    cd "${GMOPT}/paramspider"
+    command python3 -m venv paramspider_venv
+    source "paramspider_venv/bin/activate"
     command pip install --upgrade "${pipmod[@]}"
     command pip install .
     deactivate
@@ -26,18 +25,18 @@ function for_linux() {
 
     echo \
         '#!/usr/bin/env bash' \
-        > "${GMBIN}/holehe"
+        > "${GMBIN}/paramspider"
 
     echo -e \
-        "exec ${GMOPT}/holehe/holehe_venv/bin/python3 ${GMOPT}/holehe/holehe_venv/bin/holehe \"\${@}\"" \
-        >> "${GMBIN}/holehe"
+        "exec ${GMOPT}/paramspider/paramspider_venv/bin/python3 ${GMOPT}/paramspider/paramspider_venv/bin/paramspider \"\${@}\"" \
+        >> "${GMBIN}/paramspider"
 
-    command chmod +x -v "${GMBIN}/holehe"
+    command chmod +x -v "${GMBIN}/paramspider"
 }
 
 command git clone --depth 1 \
-    'https://github.com/megadose/holehe' \
-    "${GMOPT}/holehe"
+    'https://github.com/devanshbatham/ParamSpider' \
+    "${GMOPT}/paramspider"
 
 if [[ "${GMENV}" == "termux" ]]; then
     for_termux

@@ -7,18 +7,6 @@ if [[ "${confirm}" == "n" ]]; then
     exit 1
 fi
 
-if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -pv "${GMOPT}"
-fi
-
-if [[ ! -d "${GMTMP}" ]]; then
-    command mkdir -pv "${GMTMP}"
-fi
-
-if [[ -d "${GMOPT}/chprompt" ]]; then
-    command rm -rfv "${GMOPT}/chprompt"
-fi
-
 if [[ ! -f "${HOME}/.bashrc" ]]; then
     command touch "${HOME}/.bashrc"
 fi

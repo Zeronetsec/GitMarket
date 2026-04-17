@@ -119,27 +119,11 @@ EOF
     fi
 }
 
-if [[ ! -d "${GMOPT}" ]]; then
-    command mkdir -pv "${GMOPT}"
-fi
-
 if [[ -d "${GMOPT}/metasploit-framework" ]]; then
     command rm -rfv "${GMOPT}/metasploit-framework"
 fi
 
-if [[ -d "${GMTMP}/metasploit" ]]; then
-    command rm -rfv "${GMTMP}/metasploit"
-fi
-
-if [[ -x "${GMBIN}/metasploit" ]]; then
-    command rm -fv "${GMBIN}/metasploit"
-fi
-
 command mkdir -pv "${GMTMP}/metasploit"
-
-if [[ -d "${GMOPT}/metasploit" ]]; then
-    command rm -rfv "${GMOPT}/metasploit"
-fi
 
 msfbin=(
     "msf-egghunter"

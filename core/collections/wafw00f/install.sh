@@ -5,39 +5,38 @@ pipmod=(
     "pip"
     "setuptools"
     "wheel"
-    "requests"
 )
 
 function for_termux() {
-    cd "${GMOPT}/holehe"
+    cd "${GMOPT}/wafw00f"
     command pip install --upgrade "${pipmod[@]}"
-    command pip install .
+    command make
     cd
 }
 
 function for_linux() {
-    cd "${GMOPT}/holehe"
-    command python3 -m venv holehe_venv
-    source "holehe_venv/bin/activate"
+    cd "${GMOPT}/wafw00f"
+    command python3 -m venv wafw00f_venv
+    source "wafw00f_venv/bin/activate"
     command pip install --upgrade "${pipmod[@]}"
-    command pip install .
+    command make
     deactivate
     cd
 
     echo \
         '#!/usr/bin/env bash' \
-        > "${GMBIN}/holehe"
+        > "${GMBIN}/wafw00f"
 
     echo -e \
-        "exec ${GMOPT}/holehe/holehe_venv/bin/python3 ${GMOPT}/holehe/holehe_venv/bin/holehe \"\${@}\"" \
-        >> "${GMBIN}/holehe"
+        "exec ${GMOPT}/wafw00f/wafw00f_venv/bin/python3 ${GMOPT}/wafw00f/wafw00f_venv/bin/wafw00f \"\${@}\"" \
+        >> "${GMBIN}/wafw00f"
 
-    command chmod +x -v "${GMBIN}/holehe"
+    command chmod +x -v "${GMBIN}/wafw00f"
 }
 
 command git clone --depth 1 \
-    'https://github.com/megadose/holehe' \
-    "${GMOPT}/holehe"
+    'https://github.com/enablesecurity/wafw00f' \
+    "${GMOPT}/wafw00f"
 
 if [[ "${GMENV}" == "termux" ]]; then
     for_termux

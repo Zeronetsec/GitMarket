@@ -1,0 +1,11 @@
+{
+    "name": "paramspider",
+    "homepage": "https://github.com/devanshbatham/ParamSpider",
+    "description": "Mining URLs from dark corners of Web Archives for bug hunting/fuzzing/further probing",
+    "dependency": [
+        "git",
+        "python3",
+        "python3-pip::python-pip",
+        "python3-venv::python-venv"
+    ]
+}
