@@ -1,0 +1,9 @@
+{
+    "name": "s3scanner",
+    "homepage": "https://github.com/sa7mon/S3Scanner",
+    "description": "Scan for misconfigured S3 buckets across S3-compatible APIs",
+    "dependency": [
+        "git",
+        "golang"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "name": "slowloris",
+    "homepage": "https://github.com/gkbrk/slowloris",
+    "description": "Low bandwidth DoS tool. Slowloris rewrite in Python.",
+    "dependency": [
+        "git",
+        "python3"
+    ]
+}

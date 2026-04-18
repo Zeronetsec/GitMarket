@@ -4,6 +4,7 @@
 [![gover](https://img.shields.io/badge/Go-Version%201.26.1-blue.svg)]()
 [![os](https://img.shields.io/badge/Supported%20OS-Linux-blue.svg)]()
 [![license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![views](https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2FZeronetsec%2FGitMarket.json&&label=Views&color=blue)](https://github.com/Zeronetsec/GitMarket)
 
 # GitMarket
 GitMarket is a simple tool to install CLI tools from various repositories. <br>
@@ -41,8 +42,10 @@ Built to avoid doing the same setup steps over and over again.
 - [patator](https://github.com/lanjelot/patator)
 - [rclone](https://github.com/rclone/rclone)
 - [rubytask](https://github.com/Zeronetsec/Rubytask)
+- [s3scanner](https://github.com/sa7mon/S3Scanner)
 - [sherlock](https://github.com/sherlock-project/sherlock)
 - [slowhttptest](https://github.com/shekyan/slowhttptest)
+- [slowloris](https://github.com/gkbrk/slowloris)
 - [sqlmap](https://github.com/sqlmapproject/sqlmap)
 - [subfinder](https://github.com/projectdiscovery/subfinder)
 - [wafw00f](https://github.com/enablesecurity/wafw00f)
