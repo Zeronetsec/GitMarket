@@ -4,7 +4,6 @@
 [![gover](https://img.shields.io/badge/Go-Version%201.26.1-blue.svg)]()
 [![os](https://img.shields.io/badge/Supported%20OS-Linux-blue.svg)]()
 [![license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![views](https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2FZeronetsec%2FGitMarket.json&&label=Views&color=blue)](https://github.com/Zeronetsec/GitMarket)
 
 # GitMarket
 GitMarket is a simple tool to install CLI tools from various repositories. <br>
