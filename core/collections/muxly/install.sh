@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # GitMarket Project
 
+if [[ ! -d "${HOME}/.config/muxly" ]]; then
+    command mkdir -pv "${HOME}/.config/muxly"
+fi
+
 command git clone --depth 1 \
     'https://github.com/Zeronetsec/Muxly' \
     "${GMOPT}/muxly"
