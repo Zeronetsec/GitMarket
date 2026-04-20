@@ -40,6 +40,7 @@ Built to avoid doing the same setup steps over and over again.
 - [paramspider](https://github.com/devanshbatham/ParamSpider)
 - [patator](https://github.com/lanjelot/patator)
 - [rclone](https://github.com/rclone/rclone)
+- [redhawk](https://github.com/tuhinshubhra/red_hawk)
 - [rubytask](https://github.com/Zeronetsec/Rubytask)
 - [s3scanner](https://github.com/sa7mon/S3Scanner)
 - [sherlock](https://github.com/sherlock-project/sherlock)

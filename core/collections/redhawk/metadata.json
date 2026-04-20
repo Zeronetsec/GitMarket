@@ -1,0 +1,11 @@
+{
+    "name": "redhawk",
+    "homepage": "https://github.com/tuhinshubhra/red_hawk",
+    "description": "All in one tool for Information Gathering, Vulnerability Scanning and Crawling. A must have tool for all penetration testers",
+    "dependency": [
+        "git",
+        "sed",
+        "grep",
+        "php"
+    ]
+}

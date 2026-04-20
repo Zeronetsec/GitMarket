@@ -9,6 +9,12 @@ command git clone --depth 1 \
     'https://github.com/Zeronetsec/Muxly' \
     "${GMOPT}/muxly"
 
+if [[ ! -f "${HOME}/.config/muxly/config.conf" ]]; then
+    command cp -fv \
+        "${GMOPT}/muxly/config/config.xonf" \
+        "${HOME}/.config/muxly/config.conf"
+fi
+
 command chmod +x -Rv "${GMOPT}/muxly"
 command ln -sfv \
     "${GMOPT}/muxly/muxly.sh" \
