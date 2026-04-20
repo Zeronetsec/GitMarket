@@ -12,7 +12,7 @@ func CheckConnection() bool {
         Timeout: 3 * time.Second,
     }
 
-    _, err := client.Get("https://google.com")
+    _, err := client.Get("https://github.com/Zeronetsec")
     return err == nil
 }
 
