@@ -85,11 +85,6 @@ func Install(name string) {
     }
 
     for _, dep := range meta.Dependencies {
-        fmt.Printf(
-            "%s[*] %sInstalling dependency: %s%s%s\n",
-            color.B, color.N, color.GG, dep, color.N,
-        )
-
         err := installDependency(pkgManager, dep)
         if err != nil {
             fmt.Printf(
