@@ -9,51 +9,6 @@
 GitMarket is a simple tool to install CLI tools from various repositories. <br>
 Built to avoid doing the same setup steps over and over again.
 
-## Collections
-<details>
-<summary>Show collections</summary>
-
-- [amass](https://github.com/owasp-amass/amass)
-- [apktool](https://github.com/iBotPeaches/Apktool)
-- [arjun](https://github.com/s0md3v/Arjun)
-- [assetfinder](https://github.com/tomnomnom/assetfinder)
-- [chprompt](https://github.com/Zeronetsec/Chprompt)
-- [comet](https://github.com/Zeronetsec/Comet)
-- [commix](https://github.com/commixproject/commix)
-- [dalfox](https://github.com/hahwul/dalfox)
-- [ffuf](https://github.com/ffuf/ffuf)
-- [gitmarket](https://github.com/Zeronetsec/GitMarket)
-- [glow](https://github.com/charmbracelet/glow)
-- [gobuster](https://github.com/Oj/gobuster)
-- [gospel](https://github.com/Zeronetsec/Gospel)
-- [gum](https://github.com/charmbracelet/gum)
-- [holehe](https://github.com/megadose/holehe)
-- [httpx](https://github.com/projectdiscovery/httpx)
-- [hydra](https://github.com/vanhauser-thc/thc-hydra)
-- [katana](https://github.com/projectdiscovery/katana)
-- [metasploit](https://github.com/rapid7/metasploit-framework)
-- [muxly](https://github.com/Zeronetsec/Muxly)
-- [naabu](https://github.com/projectdiscovery/naabu)
-- [neofetch](https://github.com/dylanaraps/neofetch)
-- [nikto](https://github.com/sullo/nikto)
-- [nuclei](https://github.com/projectdiscovery/nuclei)
-- [paramspider](https://github.com/devanshbatham/ParamSpider)
-- [patator](https://github.com/lanjelot/patator)
-- [rclone](https://github.com/rclone/rclone)
-- [redhawk](https://github.com/tuhinshubhra/red_hawk)
-- [rubytask](https://github.com/Zeronetsec/Rubytask)
-- [s3scanner](https://github.com/sa7mon/S3Scanner)
-- [sherlock](https://github.com/sherlock-project/sherlock)
-- [slowhttptest](https://github.com/shekyan/slowhttptest)
-- [slowloris](https://github.com/gkbrk/slowloris)
-- [sqlmap](https://github.com/sqlmapproject/sqlmap)
-- [subfinder](https://github.com/projectdiscovery/subfinder)
-- [wafw00f](https://github.com/enablesecurity/wafw00f)
-- [whatweb](https://github.com/urbanadventurer/WhatWeb)
-- [zphisher](https://github.com/htr-tech/zphisher)
-
-</details>
-
 ## Features
 - Install and uninstall tools automatically
 - Search tools by keyword
@@ -62,7 +17,7 @@ Built to avoid doing the same setup steps over and over again.
 
 ## Disclaimer
 Please read the
-[DISCLAIMER.md](https://github.com/Zeronetsec/GitMarket/blob/main/DISCLAIMER.md)
+[DISCLAIMER](https://github.com/Zeronetsec/GitMarket/blob/main/DISCLAIMER.md)
 before use. <br>
 Use at your own risk. <br>
 This tool uses Bash scripts to interact with your system.
@@ -88,6 +43,7 @@ gitmarket --check <tool>
 gitmarket --info <tool>
 gitmarket --list
 ```
+And more commands.
 
 ## License
 This project is licensed under the MIT License. <br>
