@@ -16,11 +16,11 @@ Built to avoid doing the same setup steps over and over again.
 - List available tools
 
 ## Disclaimer
+This tool uses Bash scripts to interact with your system. <br>
 Please read the
 [DISCLAIMER](https://github.com/Zeronetsec/GitMarket/blob/main/DISCLAIMER.md)
 before use. <br>
-Use at your own risk. <br>
-This tool uses Bash scripts to interact with your system.
+Use at your own risk.
 
 ## Installation
 ```bash
